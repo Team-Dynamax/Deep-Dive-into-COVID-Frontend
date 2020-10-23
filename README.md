@@ -1,5 +1,5 @@
 # ECNG 3023-2007 Shared Project 
-## Description: BACKEND API
+## Description: Frontend UI
 <br>
 <br>
 <img src="images/newcovid.jpeg" alt="Girl in a jacket" width="1000" height="600">
