@@ -58,7 +58,10 @@ Document Naming Convention: <br>
     <td>------</td>
   </tr>
   <tr>
-    <td></td>
+    <td>
+      <img src="icons\PNG\1x\249-lugia.png" align="left" width="27" height="27" style="float: right;">
+      <img src="icons\PNG\1x\381-latios.png" align="left" width="27" height="27" style="float: right;">
+    </td>
     <td>Idris Ali </td>
     <td>Testing Team Leader</td>
     <td>-----</td>
@@ -71,7 +74,7 @@ Document Naming Convention: <br>
   </tr>
   <tr>
     <td>
-     <img src="icons/PNG/1x/025-pikachu.png" align="left" width="27" height="27" style="float: right;">
+      <img src="icons/PNG/1x/025-pikachu.png" align="left" width="27" height="27" style="float: right;">
     </td>
     <td>Anthony Meade</td>
     <td>Testing Team Developer</td>
@@ -109,7 +112,9 @@ Document Naming Convention: <br>
   </tr>
   <tr>
     <td>
-          <img src="icons/PNG/1x/039-jigglypuff.png" align="left" width="27" height="27" style="float: right;">
+      <img src="icons/PNG/1x/039-jigglypuff.png" align="left" width="27" height="27" style="float: right;">
+      <img src="icons/PNG/1x/039-jigglypuff.png" align="left" width="27" height="27" style="float: right;">
+      <img src="icons/PNG/1x/133-eevee.png" align="left" width="27" height="27" style="float: right;">
     </td>
     <td>Ruth Affonso-Smith</td>
     <td>Developer</td>
