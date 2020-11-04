@@ -1,12 +1,32 @@
 import React from 'react';
 import './App.css';
+import { Switch, Route } from 'react-router-dom';
+import Navigation from './components/Navigation/Navigation';
+import Footer from './components/Footer/Footer';
+import {Home} from './containers/HomePage/Home';
+import {Trends} from './containers/Trends/Trends';
+import {noMatch} from './containers/noMatch/noMatch';         // 404 Page
 
-function App() {
+// TASKS
+// 1. Add at least 1 fallback font
+// 2. Insert other links
+
+
+const App = () => {
   return (
-    <div className="App">
-     <h1>Hello World!</h1>
+    <div>     
+      <Navigation />
+        <Switch>
+          <Route exact path = "/" component={Home} />
+          <Route path = "/trends" component={Trends} />
+          <Route component = {noMatch} />
+        </Switch>
+      <Footer/>
+ 
     </div>
+   
   );
+
 }
 
 export default App;

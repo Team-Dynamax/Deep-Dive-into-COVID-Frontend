@@ -1,0 +1,35 @@
+.navbar {
+    background-color: black;
+    padding: 20px;
+}
+
+.navbar-brand {
+    color: white;
+    font-family: Montserrat;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link {
+    color: #00FF66;
+    font-family: Montserrat;
+    padding: 15px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.navbar-nav:hover .nav-link:hover {
+    color: white;
+    text-decoration: underline #00FF66;
+}
+
+.navbar-brand:hover {
+    width: 500px;
+    height: 62px;
+    border-style: solid;
+    padding: 15px;
+}
+
+ml-auto {
+   text-align: right;
+}
