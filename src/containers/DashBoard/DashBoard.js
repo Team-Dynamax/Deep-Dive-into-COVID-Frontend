@@ -21,9 +21,15 @@ const DashBoard = () => {
     return (
         <div className='bg' style = {{ backgroundImage: `url(${COVIDBG})` }}>
 
+           <br></br>
+           <br></br>
+
            <h1 className='title'>TRACKING COVID-19</h1>
 
            <h2 className='listing'>IN THE CARIBBEAN</h2>
+
+           <br></br>
+           <br></br>
 
            <h3 className='header'>{cases}      {deaths}</h3>
            <h3 className='header'> CASES        DEATHS</h3>
@@ -31,6 +37,9 @@ const DashBoard = () => {
 
            <p className='dl'><img src={cloudDL} alt=""/> {months[update.getMonth()]} {update.getDay()} {update.getFullYear()} - {update.getHours()}:{update.getMinutes()} </p>
           
+           <br></br>
+           <br></br>
+
         </div>
     )
 }

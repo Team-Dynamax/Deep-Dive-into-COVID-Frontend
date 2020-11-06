@@ -3,7 +3,9 @@
     font-family: Montserrat;
     font-weight: 600;
     font-size: 36px;
-    padding: 50px;
+    padding: 20px;
+    margin: auto;
+    width: 30%;
    
     background: rgba(202, 204, 221, 0.65);
     backdrop-filter: blur(4px);

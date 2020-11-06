@@ -7,7 +7,11 @@
     color: white;
     font-family: Montserrat;
     font-weight: 500;
+    width: 500px;
+    height: 62px;
     text-decoration: none;
+    border-style: solid;
+    padding: 15px;
 }
 
 .navbar-nav .nav-link {
@@ -24,10 +28,7 @@
 }
 
 .navbar-brand:hover {
-    width: 500px;
-    height: 62px;
-    border-style: solid;
-    padding: 15px;
+   text-decoration: underline;
 }
 
 ml-auto {

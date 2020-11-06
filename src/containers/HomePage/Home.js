@@ -8,6 +8,8 @@ export const Home = () => {
     <div>
       <DashBoard />
 
+      <br></br>
+
       <Card
         color="background-black"
         title="TRENDS VIEWER"

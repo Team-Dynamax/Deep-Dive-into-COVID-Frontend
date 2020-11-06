@@ -53,6 +53,8 @@ const Card = ( {
                 <img src={rightArrow} float='right' height='35' width='50'/> 
                 */}
             </div>
+
+            <br></br>
             
         </div>
 
