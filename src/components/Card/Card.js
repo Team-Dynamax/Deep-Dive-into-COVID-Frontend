@@ -29,6 +29,7 @@ const Card = ( {
 
         <div className={color}>
 
+            <br></br>
             <h2>{title}</h2>
             <h3>{description}</h3>
 
@@ -45,6 +46,7 @@ const Card = ( {
             }
             </ul>
 
+            <br></br>
             <div className='btn'>
                
              <a className='link' href={link}>{button}</a>

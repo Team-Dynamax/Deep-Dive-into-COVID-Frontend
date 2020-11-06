@@ -9,7 +9,6 @@ import cloudDL from './cloud_download-24px.svg';
 // 3. Put Date string into a function
 // 4. Pad zeros for Time
 // 5. Fix BG
-// 6. Fix Text Box
 
 const DashBoard = () => {
     const cases = 14440213;
@@ -34,6 +33,7 @@ const DashBoard = () => {
            <h3 className='header'>{cases}      {deaths}</h3>
            <h3 className='header'> CASES        DEATHS</h3>
 
+           <br></br>
 
            <p className='dl'><img src={cloudDL} alt=""/> {months[update.getMonth()]} {update.getDay()} {update.getFullYear()} - {update.getHours()}:{update.getMinutes()} </p>
           

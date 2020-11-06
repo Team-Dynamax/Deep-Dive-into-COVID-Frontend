@@ -12,9 +12,21 @@
     text-decoration: none;
     border-style: solid;
     padding: 15px;
+    display: inline;
 }
 
-.navbar-nav .nav-link {
+
+.navbar-brand:hover {
+  color: #00FF66;
+  text-decoration: none;
+}
+
+.links {
+    display: inline;
+    float: right;
+}
+
+a {
     color: #00FF66;
     font-family: Montserrat;
     padding: 15px;
@@ -22,15 +34,7 @@
     text-decoration: none;
 }
 
-.navbar-nav:hover .nav-link:hover {
+a:hover {
     color: white;
     text-decoration: underline #00FF66;
-}
-
-.navbar-brand:hover {
-   text-decoration: underline;
-}
-
-ml-auto {
-   text-align: right;
 }
