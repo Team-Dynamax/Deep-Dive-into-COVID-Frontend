@@ -10,10 +10,10 @@ const Navigation = () => {
         COVIZ{" "}
       </a>
       <div className="links">
-        <a href="/trends">TRENDS</a>
-        <a href="/compare">COMPARE</a>
-        <a href="/predict">PREDICT</a>
-        <a href="/about">PRODUCT</a>
+        <a href="/#trends">TRENDS</a>
+        <a href="/#compare">COMPARE</a>
+        <a href="/#predict">PREDICT</a>
+        <a href="/#about">PRODUCT</a>
       </div>
     </div>
   );

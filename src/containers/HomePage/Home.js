@@ -16,7 +16,7 @@ export const Home = () => {
         description="Interactive visualizations to explore COVID-19 growth in a selected country."
         list={list.oneVisual}
         button="View Trends"
-        link="/trends"
+        link="/#trends"
       />
 
       <Card
@@ -25,7 +25,7 @@ export const Home = () => {
         description="Comparison reports on COVID-19 cases for up to 10 selected countries."
         list={list.compareVisual}
         button="Produce Comparison Reports"
-        link="/compare"
+        link="/#compare"
       />
 
       <Card
@@ -35,7 +35,7 @@ export const Home = () => {
         image=""
         list={list.predictVisual}
         button="Predict Future Trends"
-        link="/predict"
+        link="/#predict"
       />
     </div>
   );

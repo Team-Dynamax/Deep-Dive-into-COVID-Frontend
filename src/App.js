@@ -18,7 +18,7 @@ const App = () => {
       <Navigation />
         <Switch>
           <Route exact path = "/" component={Home} />
-          <Route path = "/trends" component={Trends} />
+          <Route exact path = "/trends" component={Trends} />
           <Route component = {noMatch} />
         </Switch>
       <Footer/>
