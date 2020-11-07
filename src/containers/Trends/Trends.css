@@ -50,4 +50,6 @@ p {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100px;
+    border-radius: 15px;
+    border: none;
 }
