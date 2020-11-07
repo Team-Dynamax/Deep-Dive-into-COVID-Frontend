@@ -17,8 +17,8 @@ const App = () => {
     <div>     
       <Navigation />
         <Switch>
-          <Route exact path = "/" component={Home} />
-          <Route exact path = "/trends" component={Trends} />
+          <Route exact path = "/Deep-Dive-into-COVID-Frontend" component={Home} />
+          <Route exact path = "/Deep-Dive-into-COVID-Frontend/trends" component={Trends} />
           <Route component = {noMatch} />
         </Switch>
       <Footer/>
