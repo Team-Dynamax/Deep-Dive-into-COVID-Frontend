@@ -8,8 +8,6 @@ export const Home = () => {
     <div>
       <DashBoard />
 
-      <br></br>
-
       <Card
         color="background-black"
         title="TRENDS VIEWER"
@@ -38,7 +36,5 @@ export const Home = () => {
         link="/Deep-Dive-into-COVID-Frontend/predict"
       />
     </div>
-  );
-};
-
-export default Home;
+  )
+}

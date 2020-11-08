@@ -83,5 +83,3 @@ export const Trends = () => {
     </div>
   );
 };
-
-export default Trends;

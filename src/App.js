@@ -15,6 +15,7 @@ import {noMatch} from './containers/noMatch/noMatch';         // 404 Page
 const App = () => {
   return (
     <div>     
+      
       <Navigation />
         <Switch>
           <Route exact path = "/Deep-Dive-into-COVID-Frontend" component={Home} />
@@ -25,7 +26,7 @@ const App = () => {
  
     </div>
    
-  );
+  )
 
 }
 

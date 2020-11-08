@@ -7,7 +7,7 @@ const Navigation = () => {
     <div className="navbar">
       <a className="navbar-brand" href="/Deep-Dive-into-COVID-Frontend">
         <img src={Symbol} alt="" />
-        COVIZ{" "}
+        COVIZ
       </a>
       <div className="links">
         <a href="/Deep-Dive-into-COVID-Frontend/trends">TRENDS</a>

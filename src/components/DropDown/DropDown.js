@@ -46,6 +46,8 @@ const DropDown = ({ label, list, choice }) => {
  
 
   return (
+
+    // https://react-select.com/home
     <div>
       <form>
         <label htmlFor={label}>{label.toUpperCase()}:</label>
