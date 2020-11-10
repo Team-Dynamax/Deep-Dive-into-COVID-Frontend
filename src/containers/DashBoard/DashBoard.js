@@ -31,12 +31,12 @@ const DashBoard = () => {
            <br></br>
 
            <h3 className='header'>{cases}      {deaths}</h3>
-           <h3 className='header'> CASES        DEATHS</h3>
+           <h4 className='header'> CASES        DEATHS</h4>
 
            <br></br>
 
            <p className='dl'><img src={cloudDL} alt=""/> {months[update.getMonth()]} {update.getDay()} {update.getFullYear()} - {update.getHours()}:{update.getMinutes()} </p>
-          
+           
            <br></br>
            <br></br>
 
