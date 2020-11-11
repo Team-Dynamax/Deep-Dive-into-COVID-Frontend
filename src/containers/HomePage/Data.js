@@ -32,3 +32,4 @@ export const predictVisual = [
 
     'Expected growth of new cases in selected countries'
 ]
+

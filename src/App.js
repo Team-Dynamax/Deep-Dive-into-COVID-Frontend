@@ -6,6 +6,7 @@ import Footer from './components/Footer/Footer';
 import {Home} from './containers/HomePage/Home';
 import {Trends} from './containers/Trends/Trends';
 import {noMatch} from './containers/noMatch/noMatch';         // 404 Page
+import {Product} from './containers/Product/Product';
 
 // TASKS
 // 1. Add at least 1 fallback font
@@ -20,6 +21,7 @@ const App = () => {
         <Switch>
           <Route exact path = "/Deep-Dive-into-COVID-Frontend" component={Home} />
           <Route exact path = "/Deep-Dive-into-COVID-Frontend/trends" component={Trends} />
+          <Route exact path = "/Deep-Dive-into-COVID-Frontend/about" component={Product} />
           <Route component = {noMatch} />
         </Switch>
       <Footer/>
