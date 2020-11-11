@@ -1,10 +1,70 @@
 .Details {
-    font-family: Monsterrat, Arial;
+    font-family: fantasy;
     font-weight: 400;
-    color: black;
-    padding: 280px;
-    text-align: center;
+    color: rgb(56, 47, 47);
+    padding: opx;
+  
+    padding-left: 1pc;
+    padding-bottom: 140px;
+    font-weight: 600;
+    font-size: 36px; 
+}
+.Coviz{
+    color: rgb(48, 42, 42);
+    text-shadow: lightslategray;
     font-family: Montserrat;
     font-weight: 600;
     font-size: 36px;
+    padding: 0px;
+    font-style: initial;
+    text-align: center;
+    background: rgba(222, 224, 191, 0.65);
+    backdrop-filter: blur(0px);
+    width: 98%;
+}
+
+.Managers{
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight:500;
+    font-size: 25px;
+    padding: 1px;
+    text-align: left;
+    background: rgba(202, 204, 221, 0.65);
+    backdrop-filter: blur(4px);
+    width: 30%;
+    
+}
+.Frontend{
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    padding: 1px;
+    text-align: left;
+    background: rgba(202, 204, 221, 0.65);
+    backdrop-filter: blur(4px);
+    width: 30%;
+}
+.Backend{
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    padding: 1px;
+    text-align: left;
+    background: rgba(202, 204, 221, 0.65);
+    backdrop-filter: blur(4px);
+    width: 30%;
+}
+.Testing{
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    padding-left: 1px;
+    text-align: left;
+    background: rgba(202, 204, 221, 0.65);
+    backdrop-filter: blur(4px);
+    width: 30%;
 }
