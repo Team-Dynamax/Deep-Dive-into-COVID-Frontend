@@ -9,14 +9,10 @@ export const Product = () => {
             <div className='Details'style = {{ backgroundImage: `url(${team})` }}>
                 
                 <p><div className='Coviz'>Coviz built by Team Dynamax</div> </p> 
-                <br></br>
-                <p><div className='Managers'>Managers<p>.</p><p>.</p><p>.</p></div>
-                <br></br>
-                <div className ='Frontend'>The Frontend team<p>.</p><p>.</p><p>.</p></div>
-                <br></br>
-                <div   className='Backend'>The Backend team<p>.</p><p>.</p><p>.</p></div>
-                <br></br>
-                <div  className='Testing'>The Testing team<p>.</p><p>.</p><p>.</p></div>
+                <p><div className='Managers'>Managers<div>. </div><div>. </div><div>. </div></div>
+                <div className ='Frontend'>The Frontend team<div>. Joshua</div><div>. Lee</div><div>. Ruth</div></div>
+                <div className='Backend'>The Backend team<div>. </div><div>. </div><div>. </div></div>
+                <div className='Testing'>The Testing team<div>. </div><div>. </div><div>. </div></div>
                 </p> 
                    
         </div>
