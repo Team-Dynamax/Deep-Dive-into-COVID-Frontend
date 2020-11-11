@@ -7,10 +7,9 @@ export const Product = () => {
         <div>
             <div className='Details'>
                 404
-                <p>fjadjpaoidopad</p>
+                <p>Hello</p>
                 </div>  
         </div>
     )
 }
-
 export default Product

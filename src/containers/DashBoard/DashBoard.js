@@ -29,11 +29,14 @@ const DashBoard = () => {
 
            <br></br>
            <br></br>
-
-           <h3 className='header'>{cases}      {deaths}</h3>
-           <h4 className='header'> CASES        DEATHS</h4>
-
-           <br></br>
+            <p><div   className='left'>{ cases }</div>
+            <div   className='right'>{ deaths}</div></p>
+            <br></br>
+            <p> <div   className='Left1'>CASES</div>
+            <div   className='Right1'> DEATHS</div></p>
+        
+            <br></br>
+             <br></br>
 
            <p className='dl'><img src={cloudDL} alt=""/> {months[update.getMonth()]} {update.getDay()} {update.getFullYear()} - {update.getHours()}:{update.getMinutes()} </p>
            
