@@ -5,7 +5,7 @@
     font-size: 36px;
     padding: 20px;
     margin: auto;
-    width: 30%;
+    width: 30pc;
     background: rgba(202, 204, 221, 0.65);
     backdrop-filter: blur(4px);
     text-align: center;
@@ -57,7 +57,6 @@
     float: right;
     margin-right: 12%;
     display: inline-flex;
-
 }
 .Left1 {
     color: black;
@@ -68,7 +67,7 @@
     float: left;
     padding-top: 20px;
     margin-left: 11%;
-   
+    display: inline-flex;
     
 }
 
@@ -81,5 +80,6 @@
     float: right;
     padding-top: 20px;
     margin-right: 10%;
+    display: inline-flex;
     
 }
