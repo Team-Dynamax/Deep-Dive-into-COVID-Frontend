@@ -13,7 +13,7 @@ import cloudDL from './cloud_download-24px.svg';
 const DashBoard = () => {
     const cases = 14440213;
     const deaths = 111022;
-
+ 
     const months = [ 'JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
     const update = new Date();
 

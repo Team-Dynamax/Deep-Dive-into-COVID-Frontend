@@ -19,6 +19,7 @@
 .navbar-brand:hover {
   color: #00FF66;
   text-decoration: none;
+  padding-right: 0pc;
 }
 
 .links {
