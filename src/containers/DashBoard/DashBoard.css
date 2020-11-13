@@ -42,11 +42,11 @@
     font-family: Montserrat;
     font-weight: 600;
 
-    
+
     font-size: 36px;
     display:inline;
     float: left;
-    margin-left: 16%;
+    margin-left: 10%;
   
 }
 
@@ -57,7 +57,7 @@
     font-size: 36px;
     display:inline;
     float: right;
-    margin-right: 19%;
+    margin-right: 12%;
 }
 .Left1 {
     color: black;
@@ -67,7 +67,7 @@
     display:inline;
     float: left;
     padding-top: 20px;
-    margin-left: 17%;
+    margin-left: 11%;
    
     
 }
@@ -80,6 +80,6 @@
     display:inline;
     float: right;
     padding-top: 20px;
-    margin-right: 14%;
+    margin-right: 10%;
     
 }
