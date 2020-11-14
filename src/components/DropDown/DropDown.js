@@ -7,11 +7,13 @@ const customStyles = {
     color: "black",
     fontWeight: 600,
     padding: 10,
+    fontSize: 20,
   }),
 
   singleValue: () => ({
     color: "black",
     fontWeight: 600,
+    fontSize: 20
   }),
 
   dropdownIndicator: () => ({

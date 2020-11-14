@@ -1,14 +1,13 @@
 import React from 'react'
 import './DashBoard.css';
 import COVIDBG from './CORONA_VIRUS1.png';
-import cloudDL from './cloud_download-24px.svg';
+import cloudDL from "./../../styles/icons/cloud_download-24px.svg";
 
 // TASKS
 // 1. Implement State for interactive elements
 // 2. Refactor code
 // 3. Put Date string into a function
 // 4. Pad zeros for Time
-// 5. Fix BG
 
 const DashBoard = () => {
     const cases = 14440213;
@@ -20,6 +19,7 @@ const DashBoard = () => {
     return (
         <div className='bg' style = {{ backgroundImage: `url(${COVIDBG})` }}>
 
+           <br></br>
            <br></br>
            <br></br>
 

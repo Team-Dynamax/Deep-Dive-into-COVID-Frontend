@@ -63,14 +63,18 @@ export const Trends = () => {
       </div>
 
       <div className="box">
-        <br></br>
-        <DropDown label="country" list={countries} choice={handleCountry} />
-        <br></br>
-        <DropDown label="chart" list={charts} choice={handleChart} />
-        <br></br>
-        <DropDown label="metric" list={metrics} choice={handleFeature} />
-        <br></br>
+      <br></br>
+        <div className="inside">
 
+          <DropDown label="country" list={countries} choice={handleCountry} />
+          <br></br>
+          <DropDown label="chart" list={charts} choice={handleChart} />
+          <br></br>
+          <DropDown label="metric" list={metrics} choice={handleFeature} />
+         
+          
+        </div>
+        <br></br>
         <div>
           <button
             type="button"
@@ -78,6 +82,7 @@ export const Trends = () => {
             onClick={handleSubmit}
           ></button>
         </div>
+      
       </div>
       <br></br>
     </div>

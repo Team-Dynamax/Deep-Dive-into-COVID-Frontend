@@ -54,3 +54,7 @@ p {
     border-radius: 15px;
     border: none;
 }
+
+.inside {
+    width: 80%;
+}

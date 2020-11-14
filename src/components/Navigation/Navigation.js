@@ -1,13 +1,13 @@
 import React from "react";
 import "./Navigation.css";
-import Symbol from "./coronavirus-24px.svg";
+import { ReactComponent as Symbol } from "../../styles/icons/coronavirus-24px.svg";
 
 const Navigation = () => {
   return (
     <div className="navbar">
       <a className="navbar-brand" href="/">
-        <img src={Symbol} alt="" />
-        COVIZ
+        <Symbol className="icon" alt="" />
+        <div className="label"> COVIZ</div>
       </a>
       <div className="links">
         <a href="/trends">TRENDS</a>
