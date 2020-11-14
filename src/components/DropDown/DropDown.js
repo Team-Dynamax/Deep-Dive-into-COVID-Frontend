@@ -7,13 +7,13 @@ const customStyles = {
     color: "black",
     fontWeight: 600,
     padding: 10,
-    fontSize: 20,
+    fontSize: 15,
   }),
 
   singleValue: () => ({
     color: "black",
     fontWeight: 600,
-    fontSize: 20
+    fontSize: 15
   }),
 
   dropdownIndicator: () => ({
@@ -53,16 +53,19 @@ const DropDown = ({ label, list, choice }) => {
     <div>
       <form>
         <label htmlFor={label}>{label.toUpperCase()}:</label>
-        <Select
-          className="basic-single"
-          classNamePrefix="select"
-          value={list.value}
-          onChange={handleChange}
-          defaultValue={options[0]}
-          name={label}
-          options={options}
-          styles={customStyles}
-        />
+        <div className="position">
+          <Select
+            className="basic-single"
+            classNamePrefix="select"
+            value={list.value}
+            onChange={handleChange}
+            defaultValue={options[0]}
+            name={label}
+            options={options}
+            styles={customStyles}
+          />
+        </div>
+       
       </form>
     </div>
   );
