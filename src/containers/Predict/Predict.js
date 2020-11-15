@@ -20,7 +20,7 @@ export const Predict = () => {
   const [countries, setCountries] = useState(["Trinidad and Tobago"]);
   const [charts, setCharts] = useState(["Pie Chart"]);
   const [metrics, setMetrics] = useState(["Total Cases"]);
-  const [spans, setSpan] = useState(["NULL"]);
+  // const [spans, setSpan] = useState(["NULL"]);
 
   // pull from JSON
   useEffect(() => {
@@ -37,7 +37,7 @@ export const Predict = () => {
   const [country, setCountry] = useState(countries[0]);
   const [feature, setFeature] = useState(metrics[0]);
   const [chart, setChart] = useState(charts[0]);
-  const [span, setSpans] = useState(spans[0]);
+  // const [span, setSpans] = useState(spans[0]);
 
   // to set options
   const handleCountry = (select) => setCountry(select);
@@ -46,14 +46,16 @@ export const Predict = () => {
   // const handleSpan = (select) => setSpans(select);
 
   const [options, setOptions] = useState(
-    createHeaders(country, chart, feature, span)
+    createHeaders(country, chart, feature)
+    // createHeaders(country, chart, feature, span)
   );
 
   useEffect(() => putHeadings(options), [options]);
 
   // for button to submit changes
   const handleSubmit = () => {
-    setOptions(createHeaders(country, chart, feature, span));
+    setOptions(createHeaders(country, chart, feature));
+    // setOptions(createHeaders(country, chart, feature, span));
   };
 
   return (
