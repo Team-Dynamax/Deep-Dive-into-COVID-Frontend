@@ -1,50 +1,72 @@
-import React from 'react'
-import './DashBoard.css';
-import COVIDBG from './CORONA_VIRUS1.png';
+import React from "react";
+import "./DashBoard.css";
+import COVIDBG from "./CORONA_VIRUS1.png";
 import cloudDL from "./../../styles/icons/cloud_download-24px.svg";
 
 // TASKS
 // 1. Implement State for interactive elements
 // 2. Refactor code
-// 3. Put Date string into a function
-// 4. Pad zeros for Time
+// 3. Pad zeros for Time
 
-const DashBoard = () => {
-    const cases = 14440213;
-    const deaths = 111022;
 
-    const months = [ 'JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
-    const update = new Date();
+export const DashBoard = () => {
+  const cases = 14440213;
+  const deaths = 111022;
 
-    return (
-        <div className='bg' style = {{ backgroundImage: `url(${COVIDBG})` }}>
+  const months = [
+    "JAN",
+    "FEB",
+    "MAR",
+    "APR",
+    "MAY",
+    "JUN",
+    "JUL",
+    "AUG",
+    "SEP",
+    "OCT",
+    "NOV",
+    "DEC",
+  ];
+  const update = new Date();
 
-           <br></br>
-           <br></br>
-           <br></br>
+  const Updated = () => (
+    <p className="dl">
+      <img src={cloudDL} alt="" /> {months[update.getMonth()]} {update.getDate()}{" "}
+      {update.getFullYear()} - {update.getHours()}:{update.getMinutes()}{" "}
+    </p>
+  );
 
-           <h1 className='title'>TRACKING COVID-19</h1>
+  return (
+    <div className="bg" style={{ backgroundImage: `url(${COVIDBG})` }}>
+      <br></br>
+      <br></br>
+      <br></br>
 
-           <h2 className='listing'>IN THE CARIBBEAN</h2>
+      <h1 className="title">TRACKING COVID-19</h1>
 
-           <br></br>
-           <br></br>
-            <p><div   className='left'>{ cases }</div>
-            <div   className='right'>{ deaths}</div></p>
-            <br></br>
-            <p> <div   className='Left1'>CASES</div>
-            <div   className='Right1'> DEATHS</div></p>
-        
-            <br></br>
-             <br></br>
+      <h2 className="listing">IN THE CARIBBEAN</h2>
 
-           <p className='dl'><img src={cloudDL} alt=""/> {months[update.getMonth()]} {update.getDay()} {update.getFullYear()} - {update.getHours()}:{update.getMinutes()} </p>
-           
-           <br></br>
-           <br></br>
+      <br></br>
+      <br></br>
+      <div>
+        <div className="left">{cases}</div>
+        <div className="right">{deaths}</div>
+      </div>
+      <br></br>
+      <div>
+        <div className="Left1">CASES</div>
+        <div className="Right1"> DEATHS</div>
+      </div>
 
-        </div>
-    )
-}
+      <br></br>
+      <br></br>
 
-export default DashBoard
+     <Updated />
+
+      <br></br>
+      <br></br>
+    </div>
+  );
+};
+
+export default DashBoard;

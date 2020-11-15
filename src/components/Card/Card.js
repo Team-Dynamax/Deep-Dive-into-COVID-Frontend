@@ -4,14 +4,12 @@ import checkCircle from './check_circle-24px.svg';
 // import rightArrow from './arrow_right_alt-24px.svg';
 
 
-// TASKS: VERIFY JS AND CSS
 
 // 1. figure out a better way to place the checkboxes
 // 2. place arrow image to the right to text
 // 3. Figure out how to make scalable button size
 // 4. Place an image on the right of the list
 // 5. Scale svgs to suit
-// 6. Fix Padding and Margins
 
 
 const Card = ( {

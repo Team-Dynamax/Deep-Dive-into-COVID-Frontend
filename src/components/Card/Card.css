@@ -1,8 +1,3 @@
-* {
-    color:white;
-    padding: 0px;
-}
-
 .background-black {
     background-color: black;
 }
@@ -49,3 +44,15 @@ p {
     margin: 0px 0px 0px 15px;
     padding: 10px;
 }
+
+h2 {
+    font-family: Monsterrat, Arial;
+    font-weight: 700;
+    padding: 20px;
+  }
+  
+  h3 {
+    font-family: Monsterrat, Arial;
+    font-weight: 500;
+    padding: 15px;
+  }
