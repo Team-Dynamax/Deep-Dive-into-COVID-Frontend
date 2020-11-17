@@ -48,6 +48,7 @@ export const Trends = () => {
   const handleCountry = (select) => setCountry(select);
   const handleFeature = (select) => setFeature(select);
   const handleChart = (select) => setChart(select);
+  console.log(chart)
 
   // for button to submit changes
   const handleSubmit = () => setOptions(createHeaders(country, feature));

@@ -44,10 +44,11 @@ export const Predict = () => {
   const handleCountry = (select) => setCountry(select);
   const handleFeature = (select) => setFeature(select);
   const handleChart = (select) => setChart(select);
+  console.log(chart)
   // const handleSpan = (select) => setSpans(select);
 
   const [options, setOptions] = useState(
-    createHeaders(country, chart, feature)
+    createHeaders(country, feature)
     // createHeaders(country, chart, feature, span)
   );
 
@@ -55,7 +56,7 @@ export const Predict = () => {
 
   // for button to submit changes
   const handleSubmit = () => {
-    setOptions(createHeaders(country, chart, feature));
+    setOptions(createHeaders(country, feature));
     // setOptions(createHeaders(country, chart, feature, span));
   };
 

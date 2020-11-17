@@ -47,6 +47,7 @@ export const Compare = () => {
   const handleCountries = (select) => setSelectedCountries(select);
   const handleFeature = (select) => setFeature(select);
   const handleChart = (select) => setChart(select);
+  console.log(chart)
 
   // for button to submit changes
   const handleSubmit = () =>
