@@ -7,6 +7,7 @@ import {
   getMetrics,
   createHeaders,
   putHeadings,
+  formatOptions
 } from "./../../services/API";
 import COVIDBG from "../DashBoard/CORONA_VIRUS1.png";
 import VIZ from "./Viz.jpeg";
@@ -28,7 +29,7 @@ export const Predict = () => {
 
     getCharts().then((response) => setCharts(response.data));
 
-    getMetrics().then((response) => setMetrics(response.data));
+    getMetrics().then((response) => setMetrics(formatOptions(response.data.numerical)));
 
     // getSpan.then(response => setSpan(response.data));
   }, []);

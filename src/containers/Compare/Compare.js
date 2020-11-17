@@ -9,6 +9,7 @@ import {
   getMetrics,
   createHeaders,
   putHeadings,
+  formatOptions
 } from "./../../services/API";
 
 export const Compare = () => {
@@ -24,7 +25,7 @@ export const Compare = () => {
   useEffect(() => {
     getCountries().then((response) => setCountries(response.data));
     getCharts().then((response) => setCharts(response.data));
-    getMetrics().then((response) => setMetrics(response.data));
+    getMetrics().then((response) => setMetrics(formatOptions(response.data.numerical)));
   }, []);
 
   // selected options

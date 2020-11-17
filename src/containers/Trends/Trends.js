@@ -9,6 +9,7 @@ import {
   getMetrics,
   createHeaders,
   putHeadings,
+  formatOptions
 } from "./../../services/API";
 
 // 1 Fetch Viz
@@ -19,7 +20,7 @@ export const Trends = () => {
   // fetch headings
   const [countries, setCountries] = useState(["Trinidad and Tobago"]);
   const [charts, setCharts] = useState(["Line Chart"]);
-  const [metrics, setMetrics] = useState(["Total Cases"]);
+  const [metrics, setMetrics] = useState(["total cases"]);
 
   // pull from JSON
   useEffect(() => {
@@ -27,7 +28,8 @@ export const Trends = () => {
 
     getCharts().then((response) => setCharts(response.data));
 
-    getMetrics().then((response) => setMetrics(response.data));
+    getMetrics().then((response) => setMetrics(formatOptions(response.data.numerical)));
+
   }, []);
 
   // selected options
@@ -37,7 +39,7 @@ export const Trends = () => {
 
   // creates a JSON of the selected headings
   const [options, setOptions] = useState(
-    createHeaders(country, chart, feature)
+    createHeaders(country, feature)
   );
 
   useEffect(() => putHeadings(options), [options]);
@@ -48,7 +50,7 @@ export const Trends = () => {
   const handleChart = (select) => setChart(select);
 
   // for button to submit changes
-  const handleSubmit = () => setOptions(createHeaders(country, chart, feature));
+  const handleSubmit = () => setOptions(createHeaders(country, feature));
 
   return (
     <div className="bg" style={{ backgroundImage: `url(${COVIDBG})` }}>
