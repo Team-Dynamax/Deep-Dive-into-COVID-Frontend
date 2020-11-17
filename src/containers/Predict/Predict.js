@@ -25,9 +25,9 @@ export const Predict = () => {
 
   // pull from JSON
   useEffect(() => {
-    getCountries().then((response) => setCountries(response.data));
+    getCountries().then((response) => setCountries(response.data.countries));
 
-    getCharts().then((response) => setCharts(response.data));
+    getCharts().then((response) => setCharts(response.data.charts));
 
     getMetrics().then((response) => setMetrics(formatOptions(response.data.numerical)));
 

@@ -19,14 +19,14 @@ import {
 export const Trends = () => {
   // fetch headings
   const [countries, setCountries] = useState(["Trinidad and Tobago"]);
-  const [charts, setCharts] = useState(["Line Chart"]);
+  const [charts, setCharts] = useState(["lineplot"]);
   const [metrics, setMetrics] = useState(["total cases"]);
 
   // pull from JSON
   useEffect(() => {
-    getCountries().then((response) => setCountries(response.data));
+    getCountries().then((response) => setCountries(response.data.countries));
 
-    getCharts().then((response) => setCharts(response.data));
+    getCharts().then((response) => setCharts(response.data.charts));
 
     getMetrics().then((response) => setMetrics(formatOptions(response.data.numerical)));
 

@@ -10,16 +10,16 @@ export const formatOptions = (options) => {
 }
 
 export const getCountries = async () =>
-  await axios.get("http://localhost:3001/countries");
+  await axios.get("https://td-coviz.herokuapp.com/api/options/countries");
 
 export const getCharts = async () =>
-  await axios.get("http://localhost:3001/charts");
+  await axios.get("https://td-coviz.herokuapp.com/api/options/charts");
 
 export const getMetrics = async () =>
-  await axios.get("https://deep-dive-into-coviz.herokuapp.com/options/numerical");
+  await axios.get("https://td-coviz.herokuapp.com/api/options/numerical");
 
 export const putHeadings = async (options) =>
-  await axios.put("https://deep-dive-into-coviz.herokuapp.com/charts/lineplot/1", options).catch(err => console.log(err));
+  await axios.put("https://td-coviz.herokuapp.com/api/charts/lineplot/1", options).catch(err => console.log(err));
 
 export const createHeaders = (countries, feature) => {
   return {
