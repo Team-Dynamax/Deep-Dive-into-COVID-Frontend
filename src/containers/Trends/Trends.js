@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import '../../App.css';
 import DropDown from "../../components/DropDown/DropDown";
 import COVIDBG from "../DashBoard/CORONA_VIRUS1.png";
-import VIZ from "./Viz.jpeg";
 import {
   getCountries,
   getCharts,
@@ -11,24 +10,25 @@ import {
   putHeadings,
   formatOptions
 } from "./../../services/API";
+import VizAPI from "./../../services/VizAPI";
 
 // 1 Fetch Viz
 // 2 Fix bug: Invisible Text when typing
-// 3 Implement Features array
 
 export const Trends = () => {
   // fetch headings
   const [countries, setCountries] = useState(["Trinidad and Tobago"]);
   const [charts, setCharts] = useState(["lineplot"]);
   const [metrics, setMetrics] = useState(["total cases"]);
+  const [graph, setGraph] = useState({data : [], layout: null});
 
   // pull from JSON
   useEffect(() => {
-    getCountries().then((response) => setCountries(response.data.countries));
+    getCountries().then((response) => setCountries(response.data));
 
-    getCharts().then((response) => setCharts(response.data.charts));
+    getCharts().then((response) => setCharts(response.data));
 
-    getMetrics().then((response) => setMetrics(formatOptions(response.data.numerical)));
+    getMetrics().then((response) => setMetrics(formatOptions(response.data)));
 
   }, []);
 
@@ -39,10 +39,13 @@ export const Trends = () => {
 
   // creates a JSON of the selected headings
   const [options, setOptions] = useState(
-    createHeaders(country, feature)
+    createHeaders([country], feature)
   );
 
-  useEffect(() => putHeadings(options), [options]);
+  useEffect(() => {
+    putHeadings(options).then(response => setGraph(response.data))
+
+  }, [options]);
 
   // to set options
   const handleCountry = (select) => setCountry(select);
@@ -51,13 +54,20 @@ export const Trends = () => {
   console.log(chart)
 
   // for button to submit changes
-  const handleSubmit = () => setOptions(createHeaders(country, feature));
+  const handleSubmit = () => setOptions(createHeaders([country], feature));
 
   return (
     <div className="bg" style={{ backgroundImage: `url(${COVIDBG})` }}>
       <div className="container">
-        <img className="center" src={VIZ} alt="" />
+
+       
+
+         <VizAPI data={graph.data} layout = {graph.layout} /> 
+        
+        {/* <img className="center" src={VIZ} alt="" /> */}
       </div>
+      
+     
 
       <div className="box">
       

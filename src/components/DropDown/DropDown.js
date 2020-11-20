@@ -48,6 +48,7 @@ export const DropDown = ({ label, list, choice }) => {
     choice(option.value);
   }, [choice, option]);
 
+
   return (
     // https://react-select.com/home
     <div>

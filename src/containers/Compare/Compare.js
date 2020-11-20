@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import '../../App.css';
 import { DropDown, MultiSelect } from "./../../components/DropDown/DropDown";
 import COVIDBG from "../DashBoard/CORONA_VIRUS1.png";
-import VIZ2 from "./VIZ2.jpeg";
+import VizAPI from "./../../services/VizAPI"
 import {
   getCountries,
   getCharts,
@@ -18,16 +18,17 @@ export const Compare = () => {
     "Barbados",
     "Trinidad and Tobago",
   ]);
-  const [charts, setCharts] = useState(["Line Chart"]);
+  const [charts, setCharts] = useState(["lineplot"]);
   const [metrics, setMetrics] = useState(["Total Cases"]);
+  const [graph, setGraph] = useState({data : [], layout: null});
 
   // pull from JSON
   useEffect(() => {
-    getCountries().then((response) => setCountries(response.data.countries));
+    getCountries().then((response) => setCountries(response.data));
 
-    getCharts().then((response) => setCharts(response.data.charts));
+    getCharts().then((response) => setCharts(response.data));
 
-    getMetrics().then((response) => setMetrics(formatOptions(response.data.numerical)));
+    getMetrics().then((response) => setMetrics(formatOptions(response.data)));
   }, []);
 
   // selected options
@@ -40,10 +41,13 @@ export const Compare = () => {
 
   // creates a JSON of the selected headings
   const [options, setOptions] = useState(
-    createHeaders(selectedCountries, chart, feature)
+    createHeaders(selectedCountries, feature)
   );
 
-  useEffect(() => putHeadings(options), [options]);
+  useEffect(() => {
+    putHeadings(options).then(response => setGraph(response.data))
+
+  }, [options]);
 
   // to set options
   const handleCountries = (select) => setSelectedCountries(select);
@@ -53,12 +57,15 @@ export const Compare = () => {
 
   // for button to submit changes
   const handleSubmit = () =>
-    setOptions(createHeaders(selectedCountries, chart, feature));
+    setOptions(createHeaders(selectedCountries, feature));
 
   return (
     <div className="bg" style={{ backgroundImage: `url(${COVIDBG})` }}>
       <div className="container">
-        <img className="center" src={VIZ2} alt="" />
+      
+
+      <VizAPI data={graph.data} layout = {graph.layout} /> 
+      
       </div>
 
       <div className="box">

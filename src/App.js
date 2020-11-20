@@ -7,7 +7,6 @@ import { Home } from './containers/HomePage/Home';
 import { Trends } from './containers/Trends/Trends';
 import {Product} from './containers/Product/Product';
 import { Compare } from './containers/Compare/Compare';
-import { Predict } from './containers/Predict/Predict';
 import { noMatch } from './containers/noMatch/noMatch';         // 404 Page
 
 // TASKS
@@ -23,7 +22,6 @@ const App = () => {
           <Route exact path = "/" component={Home} />
           <Route exact path = "/trends" component={Trends} />
           <Route exact path = "/compare" component={Compare} />
-          <Route exact path = "/predict" component={Predict} />
           <Route exact path = "/about" component={Product} />
           <Route component = {noMatch} />
         </Switch>

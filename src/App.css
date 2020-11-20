@@ -38,20 +38,6 @@
   padding: 0px;
 }
 
- /* feature pages */
-.center {
-  padding: 20px;
-  max-width: 90%;
-  max-height: 90%;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: block;
-  padding-bottom: 1px;
-}
-
 .container {
   width: 100%;
   height: 600px;

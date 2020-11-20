@@ -25,16 +25,7 @@ export const Home = () => {
         button="Produce Comparison Reports"
         link="/compare"
       />
-
-      <Card
-        color="background-indigo"
-        title="ANALYTICS VIEWER"
-        description="Visualizations produced from requested predictions."
-        image=""
-        list={list.predictVisual}
-        button="Predict Future Trends"
-        link="/predict"
-      />
+      
     </div>
   )
 }
