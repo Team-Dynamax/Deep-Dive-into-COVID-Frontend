@@ -47,6 +47,13 @@
   left: 0;
   right: 0;
   object-fit: contain;
+  
+}
+
+.center {
+  text-align: center;
+  padding: 5%;
+
 }
 
 .box {

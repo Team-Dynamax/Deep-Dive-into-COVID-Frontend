@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
-import '../../App.css';
+import "../../App.css";
 import { DropDown, MultiSelect } from "./../../components/DropDown/DropDown";
 import COVIDBG from "../DashBoard/CORONA_VIRUS1.png";
-import VizAPI from "./../../services/VizAPI"
+import VizAPI from "./../../services/VizAPI";
 import {
   getCountries,
   getCharts,
   getMetrics,
   createHeaders,
   putHeadings,
-  formatOptions
+  formatOptions,
 } from "./../../services/API";
 
 export const Compare = () => {
@@ -20,7 +20,7 @@ export const Compare = () => {
   ]);
   const [charts, setCharts] = useState(["lineplot"]);
   const [metrics, setMetrics] = useState(["Total Cases"]);
-  const [graph, setGraph] = useState({data : [], layout: null});
+  const [graph, setGraph] = useState({ data: [], layout: null });
 
   // pull from JSON
   useEffect(() => {
@@ -45,15 +45,14 @@ export const Compare = () => {
   );
 
   useEffect(() => {
-    putHeadings(options).then(response => setGraph(response.data))
-
+    putHeadings(options).then((response) => setGraph(response.data));
   }, [options]);
 
   // to set options
   const handleCountries = (select) => setSelectedCountries(select);
   const handleFeature = (select) => setFeature(select);
   const handleChart = (select) => setChart(select);
-  console.log(chart)
+  console.log(chart);
 
   // for button to submit changes
   const handleSubmit = () =>
@@ -62,10 +61,9 @@ export const Compare = () => {
   return (
     <div className="bg" style={{ backgroundImage: `url(${COVIDBG})` }}>
       <div className="container">
-      
-
-      <VizAPI data={graph.data} layout = {graph.layout} /> 
-      
+        <div className="center">
+          <VizAPI data={graph.data} layout={graph.layout} />
+        </div>
       </div>
 
       <div className="box">

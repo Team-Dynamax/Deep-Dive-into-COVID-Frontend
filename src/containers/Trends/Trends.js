@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import '../../App.css';
+import "../../App.css";
 import DropDown from "../../components/DropDown/DropDown";
 import COVIDBG from "../DashBoard/CORONA_VIRUS1.png";
 import {
@@ -8,7 +8,7 @@ import {
   getMetrics,
   createHeaders,
   putHeadings,
-  formatOptions
+  formatOptions,
 } from "./../../services/API";
 import VizAPI from "./../../services/VizAPI";
 
@@ -20,7 +20,7 @@ export const Trends = () => {
   const [countries, setCountries] = useState(["Trinidad and Tobago"]);
   const [charts, setCharts] = useState(["lineplot"]);
   const [metrics, setMetrics] = useState(["total cases"]);
-  const [graph, setGraph] = useState({data : [], layout: null});
+  const [graph, setGraph] = useState({ data: [], layout: null });
 
   // pull from JSON
   useEffect(() => {
@@ -29,7 +29,6 @@ export const Trends = () => {
     getCharts().then((response) => setCharts(response.data));
 
     getMetrics().then((response) => setMetrics(formatOptions(response.data)));
-
   }, []);
 
   // selected options
@@ -38,20 +37,17 @@ export const Trends = () => {
   const [chart, setChart] = useState(charts[0]);
 
   // creates a JSON of the selected headings
-  const [options, setOptions] = useState(
-    createHeaders([country], feature)
-  );
+  const [options, setOptions] = useState(createHeaders([country], feature));
 
   useEffect(() => {
-    putHeadings(options).then(response => setGraph(response.data))
-
+    putHeadings(options).then((response) => setGraph(response.data));
   }, [options]);
 
   // to set options
   const handleCountry = (select) => setCountry(select);
   const handleFeature = (select) => setFeature(select);
   const handleChart = (select) => setChart(select);
-  console.log(chart)
+  console.log(chart);
 
   // for button to submit changes
   const handleSubmit = () => setOptions(createHeaders([country], feature));
@@ -59,18 +55,12 @@ export const Trends = () => {
   return (
     <div className="bg" style={{ backgroundImage: `url(${COVIDBG})` }}>
       <div className="container">
-
-       
-
-         <VizAPI data={graph.data} layout = {graph.layout} /> 
-        
-        {/* <img className="center" src={VIZ} alt="" /> */}
+        <div className="center">
+          <VizAPI data={graph.data} layout={graph.layout} />
+        </div>
       </div>
-      
-     
 
       <div className="box">
-      
         <div className="inside">
           <DropDown label="country" list={countries} choice={handleCountry} />
           <br></br>
@@ -78,13 +68,13 @@ export const Trends = () => {
           <br></br>
           <DropDown label="metric" list={metrics} choice={handleFeature} />
         </div>
-       
+
         <div>
           <button
             type="button"
             className="update"
             onClick={handleSubmit}
-          ></button>
+          ></button> 
         </div>
       </div>
       <br></br>
