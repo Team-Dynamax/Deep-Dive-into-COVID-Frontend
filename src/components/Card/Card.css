@@ -4,40 +4,44 @@
 
 .background-blue {
     background-color: blue;
-    padding-bottom: 65px;
-}
-
-.background-indigo {
-    background-color: indigo;
 }
 
 li {
-    display: inline-block;
     width: auto;
+    margin: 8px;
+    color: white;
+    font-size: 65%;
+    font-weight: 300;
     padding: 10px;
-    margin: 10px;
+    list-style-image: url("../../styles/icons/check_circle-24px.svg");
+}
+
+.bpt {
+    display: flex;
+    margin-left: 30px;
 }
 
 .btn {  
-    width: 500px;
-    height: 62px;
+    width: fit-content;
     padding: 15px;
     background: #00B127;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
-    margin: 30px;
-}
-
-.link {
-    font-family: Montserrat;
+    margin: 20px;
+    display: inline-flex;
     font-weight: 600;
-    font-size: 24px;
-    text-decoration: none;
+    font-size: 85%;
     color: white;
+    font-family: Montserrat;
 }
 
-.link:hover {
+.btn:hover {
     text-decoration: none;
+    background-color:darkgreen;
+}
+
+.arrow {
+    fill: white;
 }
 
 p {

@@ -7,7 +7,7 @@ const Plot = createPlotlyComponent(Plotly);
 const VizAPI = ({data, layout}) => {
 
     return (
-        <div>
+        <div className="center">
             <Plot data={data} layout={layout} /> 
         </div>
     )

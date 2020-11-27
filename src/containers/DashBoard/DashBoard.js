@@ -1,68 +1,78 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./DashBoard.css";
-import COVIDBG from "./CORONA_VIRUS1.png";
-import cloudDL from "./../../styles/icons/cloud_download-24px.svg";
+import COVIDBG from "../../styles/CORONA_VIRUS1.png";
+import { getStats } from "../../services/API";
 
-// TASKS
-// 1. Implement State for interactive elements
-// 2. Refactor code
-// 3. Pad zeros for Time
-
+// Indicates errors in the API
+const Update = ({ updated }) => {
+  if (updated === "Caching in progress") {
+    return <div className="caching">&#x2715; CACHING IN PROGRESS</div>;
+  } else return <div></div>;
+};
 
 export const DashBoard = () => {
-  const cases = 14440213;
-  const deaths = 111022;
+  // Stores Metrics
+  const [stats, setStats] = useState({});
+  const [state, setState] = useState("");
 
-  const months = [
-    "JAN",
-    "FEB",
-    "MAR",
-    "APR",
-    "MAY",
-    "JUN",
-    "JUL",
-    "AUG",
-    "SEP",
-    "OCT",
-    "NOV",
-    "DEC",
-  ];
-  const update = new Date();
-
-  const Updated = () => (
-    <p className="dl">
-      <img src={cloudDL} alt="" /> {months[update.getMonth()]} {update.getDate()}{" "}
-      {update.getFullYear()} - {update.getHours()}:{update.getMinutes()}{" "}
-    </p>
-  );
+  useEffect(() => {
+    getStats().then((response) => {
+      setStats(response.data["Global"]);
+      setState(response.data["Message"]);
+    });
+  }, []);
 
   return (
     <div className="bg" style={{ backgroundImage: `url(${COVIDBG})` }}>
-      <br></br>
-      <br></br>
-      <br></br>
+      <div className="row">
+        <br></br>
+        <br></br>
+        <br></br>
 
-      <h1 className="title">TRACKING COVID-19</h1>
+        <div className="column">
+          <div className="slideup">
+            <h1 className="title">TRACKING COVID-19</h1>
+            <h2 className="listing">WORLDWIDE</h2>
 
-      <h2 className="listing">IN THE CARIBBEAN</h2>
-
-      <br></br>
-      <br></br>
-      <div>
-        <div className="left">{cases}</div>
-        <div className="right">{deaths}</div>
+            <p className="dl">
+              <br></br>
+              FROM OUR WORLD IN DATA
+              <br></br>
+              <br></br>
+              <br></br>
+              UPDATED 10PM DAILY
+              <br></br>
+            </p>
+          </div>
+        </div>
+        <div className="column">
+          <div className="stats">
+            <Update updated={state} />
+            TOTAL CASES AS OF TODAY:
+            <div className="typewriter">
+              <p className="metric">{stats["TotalConfirmed"]}</p>
+            </div>
+            <br></br>
+            NEW CASES AS OF TODAY:
+            <div className="typewriter">
+              <p className="metric">{stats["NewConfirmed"]}</p>
+            </div>
+            <br></br>
+            TOTAL DEATHS AS OF TODAY:
+            <div className="typewriter">
+              <p className="metric">{stats["TotalDeaths"]}</p>
+            </div>
+            <br></br>
+            NEW DEATHS AS OF TODAY:
+            <div className="typewriter">
+              <p className="metric">{stats["TotalDeaths"]}</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <br></br>
-      <div>
-        <div className="Left1">CASES</div>
-        <div className="Right1"> DEATHS</div>
-      </div>
 
       <br></br>
       <br></br>
-
-     <Updated />
-
       <br></br>
       <br></br>
     </div>

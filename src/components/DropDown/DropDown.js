@@ -1,30 +1,28 @@
 import React, { useState, useEffect } from "react";
 import "./DropDown.css";
-import Select from "react-select";
+import Select, { components } from "react-select";
+import CreatableSelect from "react-select/creatable";
 
 const customStyles = {
   option: () => ({
-    color: "black",
-    fontWeight: 600,
+    color: "white",
+    fontWeight: 500,
     padding: 10,
-    fontSize: 15,
-  }),
-
-  singleValue: () => ({
-    color: "black",
-    fontWeight: 600,
     fontSize: 15,
   }),
 
   dropdownIndicator: () => ({
-    backgroundColor: "blue",
+    backgroundColor: "black",
     padding: 10,
   }),
 
-  input: () => ({
-    padding: 10,
+  menuList: () => ({
+    backgroundColor: "black",
   }),
 };
+
+// select limit
+const limit = 10;
 
 const formatOptions = (options) =>
   options.map((item) => {
@@ -48,26 +46,22 @@ export const DropDown = ({ label, list, choice }) => {
     choice(option.value);
   }, [choice, option]);
 
-
   return (
     // https://react-select.com/home
-    <div>
-      <form>
-        <label htmlFor={label}>{label.toUpperCase()}:</label>
-        <div className="position">
-          <Select
-            className="basic-single"
-            classNamePrefix="select"
-            value={list.value}
-            onChange={handleChange}
-            defaultValue={options[0]}
-            name={label}
-            options={options}
-            styles={customStyles}
-          />
-        </div>
-      </form>
-    </div>
+    <form>
+      <label htmlFor={label}>{label.toUpperCase()}:</label>
+      <div className="position">
+        <Select
+          classNamePrefix="select"
+          value={list.value}
+          onChange={handleChange}
+          defaultValue={options[0]}
+          name={label}
+          options={options}
+          styles={customStyles}
+        />
+      </div>
+    </form>
   );
 };
 
@@ -81,34 +75,63 @@ export const MultiSelect = ({ label, list, choice }) => {
   });
 
   // set selected values
-  const handleChange = (event) =>
-    setOption({ value: Array.from(event).map((item) => item.value) });
+  const handleChange = (event) => {
+    if (event instanceof Array) {
+      return setOption({ value: Array.from(event).map((item) => item.value) });
+    }
+  };
 
   // return selected options
   useEffect(() => {
     choice(option.value);
   }, [choice, option]);
 
+  // handle more than 10 selections
+  const Menu = (props) => {
+    const optionSelectedLength = props.getValue().length || 0;
+    return (
+      <components.Menu {...props}>
+        {optionSelectedLength < limit ? (
+          props.children
+        ) : (
+          <div className="restrict">MAX LIMIT ACHIEVED</div>
+        )}
+      </components.Menu>
+    );
+  };
+
+  const isValidNewOption = (inputValue, selectValue) =>
+    inputValue.length > 0 && selectValue.length < limit;
+
   return (
     // https://react-select.com/home
-    <div>
-      <form>
-        <label htmlFor={label}>{label.toUpperCase()}:</label>
-        <div className="position">
-          <Select
-            className="basic-multi-select"
-            classNamePrefix="select"
-            isMulti
-            value={list.value}
-            onChange={handleChange}
-            defaultValue={[options[0], options[1]]}
-            name={label}
-            options={options}
-            styles={customStyles}
-          />
-        </div>
-      </form>
-    </div>
+    <form>
+      <label htmlFor={label}>{label.toUpperCase()}:</label>
+      <div className="position">
+        {/* <Select
+          classNamePrefix="multi-select"
+          isMulti
+          value={list.value}
+          onChange={handleChange}
+          defaultValue={[options[0], options[1]]}
+          name={label}
+          options={options}
+          styles={customStyles}
+          closeMenuOnSelect={false}
+        /> */}
+        <CreatableSelect
+          classNamePrefix="multi-select"
+          components={{ Menu }}
+          isMulti
+          isValidNewOption={isValidNewOption}
+          options={options}
+          styles={customStyles}
+          onChange={handleChange}
+          closeMenuOnSelect={false}
+          defaultValue={[options[0], options[1]]}
+        />
+      </div>
+    </form>
   );
 };
 

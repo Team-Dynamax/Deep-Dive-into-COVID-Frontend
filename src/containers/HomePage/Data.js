@@ -1,35 +1,25 @@
 export const oneVisual = [
 
-    'Growth of cases over a specified time period',
+    'Growth of total cases in a specified country',
 
-    'Growth of new cases per day',
+    'Growth of new cases per day in a specified country',
 
-    'Growth in deaths over a specified time period',
+    'Growth of total deaths in a specified country',
 
-    'Growth of cases per million people',
+    'Growth of cases per million people in a specified country',
     
-    'Growth of new cases per million people'
+    'Growth of new cases per million people in a specified country'
 ]
 
 export const compareVisual = [
 
-    'Compare proportion of total cases as of today',
+    'Compare growth of cases between selected countries',
 
-    'Compare growth of cases per million people in select countries',
+    'Compare growth in deaths between selected countries',
 
-    'Compare growth of cases over a specified period of time',
+    'Compare growth of new cases per day  between selected countries',
 
-    'Compare growth in deaths over a specified period of time'
-]
-
-export const predictVisual = [
+    'Compare growth of cases per million people between selected countries',
     
-    'Expected growth of cases in selected countries',
-
-    'Expected growth in deaths in selected countries',
-
-    'Expected growth of cases per million people in selected countries',
-
-    'Expected growth of new cases in selected countries'
+    'Compare growth of new cases per million people between selected countries'
 ]
-

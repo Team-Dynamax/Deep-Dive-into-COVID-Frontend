@@ -20,9 +20,9 @@ export const Home = () => {
       <Card
         color="background-blue"
         title="COMPARISON VIEWER"
-        description="Comparison reports on COVID-19 cases for up to 10 selected countries."
+        description="Compare COVID-19 growth for up to 10 selected countries."
         list={list.compareVisual}
-        button="Produce Comparison Reports"
+        button="Compare Countries"
         link="/compare"
       />
       

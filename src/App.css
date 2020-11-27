@@ -29,41 +29,109 @@
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
+  margin: auto;
   font-family: Montserrat, Arial;
   font-weight: 400;
   font-size: 24px;
+  padding: 0;
   color: white;
-  padding: 0px;
+  width: auto;
 }
 
-.container {
-  width: 100%;
-  height: 600px;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  object-fit: contain;
-  
+.row {
+  margin-left: 0;
+  margin-right: 4%;
 }
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.lcolumn {
+  float: left;
+  width: 40%;
+}
+
+.mlcolumn {
+  float: left;
+  width: 50%;
+}
+
+.rcolumn {
+  float: right;
+  width: 50%;
+}
+
+.box {
+  background: #0f0f0fe8;
+  padding: 15px;
+  margin: 30px;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 900px) {
+  .column {
+    width: 100%;
+  }
+
+  .lcolumn, .rcolumn, .mlcolumn {
+    width: 100%;
+  }
+
+  .row {
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+
+  .box {
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+  }
+}
+
+.layout {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.footer {
+  font-family: Montserrat;
+  font-weight: 300;
+  font-size: 36px;
+  text-align: right;
+  color: white;
+  background-color: black;
+  padding: 15px;
+}
+
+.error {
+  font-family: Monsterrat, Arial;
+  font-weight: 400;
+  padding: 280px 0px 280px 0px;
+  color: black;
+  text-align: center;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 36px;
+  text-align: center;
+} 
 
 .center {
   text-align: center;
   padding: 5%;
-
-}
-
-.box {
-  background: #edebeb;
-  padding: 15px;
-  margin: auto;
-  width: 90%;
-  box-sizing: border-box;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 15px;
+  border: 1px solid black;
+  background: white;
+  overflow: auto;
 }
 
 p {
@@ -92,4 +160,10 @@ p {
 .inside {
   width: 100%;
   padding: 2%;
+}
+
+.warning {
+  padding: 1%;
+  color: red;
+  font-weight: 500;
 }

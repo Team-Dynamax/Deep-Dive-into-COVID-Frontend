@@ -1,14 +1,51 @@
 label {
-    padding: 5px;
-    background: #4200FF;
-    box-sizing: border-box;
-    font-family: Montserrat;
-    font-weight: 600px;
-    font-size: 150%;
-    float: left;
+  padding: 5px;
+  font-weight: 500px;
+  font-size: 150%;
+  color: #00ff66;
 }
 
 .position {
-    display: inline-block;
-    width: 80%;
+  display: inline-block;
+  width: 95%;
+}
+
+/* React-Select 
+   !important is required to override specific styles set by the webpack */
+.select__control {
+  background-color: black !important;
+}
+
+.select__single-value {
+  color: white !important;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.multi-select__control {
+  background-color: black !important;
+}
+
+.multi-select__single-value {
+  color: white !important;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.multi-select__multi-value {
+  background-color: blue !important;
+}
+
+.multi-select__multi-value__label {
+  color: white !important;
+  font-weight: 500;
+  font-size: 15px;
+}
+  
+.restrict {
+  background-color: black;
+  color: red;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600;
 }
