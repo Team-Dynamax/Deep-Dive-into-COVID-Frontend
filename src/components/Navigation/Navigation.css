@@ -3,6 +3,12 @@
     padding: 0.5%;
 }
 
+.navbar:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .navbar-brand {
     margin-left: 1.2%;
     color: white;
@@ -30,7 +36,7 @@
 
 a {
     color: #00FF66;
-    font-size: 80%;
+    font-size: 70%;
     padding: 3% 7% 0% 0%;
     font-weight: 600;
     text-decoration: none;
