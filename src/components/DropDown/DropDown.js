@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./DropDown.css";
 import Select, { components } from "react-select";
-import CreatableSelect from "react-select/creatable";
 
 const customStyles = {
   option: () => ({
@@ -13,12 +12,21 @@ const customStyles = {
 
   dropdownIndicator: () => ({
     backgroundColor: "black",
+    color: "white",
     padding: 10,
   }),
 
-  menuList: () => ({
-    backgroundColor: "black",
+  multiValueRemove: () => ({
+    color: "white",
+    "&:hover": {
+      backgroundColor: "red",
+    }
   }),
+
+  input: () => ({
+    color: "white",
+  })
+
 };
 
 // select limit
@@ -53,10 +61,8 @@ export const DropDown = ({ label, list, choice }) => {
       <div className="position">
         <Select
           classNamePrefix="select"
-          value={list.value}
           onChange={handleChange}
           defaultValue={options[0]}
-          name={label}
           options={options}
           styles={customStyles}
         />
@@ -108,19 +114,8 @@ export const MultiSelect = ({ label, list, choice }) => {
     <form>
       <label htmlFor={label}>{label.toUpperCase()}:</label>
       <div className="position">
-        {/* <Select
-          classNamePrefix="multi-select"
-          isMulti
-          value={list.value}
-          onChange={handleChange}
-          defaultValue={[options[0], options[1]]}
-          name={label}
-          options={options}
-          styles={customStyles}
-          closeMenuOnSelect={false}
-        /> */}
-        <CreatableSelect
-          classNamePrefix="multi-select"
+        <Select
+            classNamePrefix="multi-select"
           components={{ Menu }}
           isMulti
           isValidNewOption={isValidNewOption}

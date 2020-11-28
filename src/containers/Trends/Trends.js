@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "../../App.css";
 import DropDown from "../../components/DropDown/DropDown";
 import COVIDBG from "../../styles/CORONA_VIRUS1.png";
 import {
@@ -32,6 +31,7 @@ export const Trends = () => {
 
   // send to visualization API
   useEffect(() => {
+    setGraph({ data: [], layout: null });
     putHeadings(options).then((response) => setGraph(response.data));
   }, [options]);
 

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "../../App.css";
 import { DropDown, MultiSelect } from "./../../components/DropDown/DropDown";
 import COVIDBG from "../../styles/CORONA_VIRUS1.png";
 import VizAPI from "./../../services/VizAPI";
