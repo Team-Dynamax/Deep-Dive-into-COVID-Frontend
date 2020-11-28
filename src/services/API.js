@@ -5,6 +5,14 @@ const dashURL = "https://api.covid19api.com/summary";
 
 const formatString1 = (str) => str.replace(/ /g, "_").toLowerCase();
 const formatString2 = (str) => str.replace(/_/g, " ");
+export const arrayEquals = (a, b) => {
+  return (
+    Array.isArray(a) &&
+    Array.isArray(b) &&
+    a.length === b.length &&
+    a.every((val, index) => val === b[index])
+  );
+};
 
 export const formatOptions = (options) =>
   options.map((item) => formatString2(item));

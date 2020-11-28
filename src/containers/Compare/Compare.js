@@ -8,6 +8,7 @@ import {
   createHeaders,
   putHeadings,
   formatOptions,
+  arrayEquals,
 } from "./../../services/API";
 
 const Warning = ({ select }) => {
@@ -46,6 +47,7 @@ export const Compare = () => {
   );
 
   useEffect(() => {
+    setGraph({ data: [], layout: null });
     putHeadings(options).then((response) => setGraph(response.data));
   }, [options]);
 
@@ -59,9 +61,18 @@ export const Compare = () => {
     if (selectedCountries.length < 2) {
       setFlag(true);
     } else {
-      if (flag === true) setFlag(false);
+      const setHeaders = createHeaders(selectedCountries, feature);
 
-      setOptions(createHeaders(selectedCountries, feature));
+      if (
+        !(
+          arrayEquals(options["countries"], setHeaders["countries"]) &&
+          options["feature"] === setHeaders["feature"]
+        )
+      ) {
+        if (flag === true) setFlag(false);
+
+        setOptions(setHeaders);
+      }
     }
   };
 

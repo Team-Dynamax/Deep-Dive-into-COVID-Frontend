@@ -7,6 +7,7 @@ import {
   createHeaders,
   putHeadings,
   formatOptions,
+  arrayEquals,
 } from "./../../services/API";
 import VizAPI from "./../../services/VizAPI";
 
@@ -40,7 +41,17 @@ export const Trends = () => {
   const handleFeature = (select) => setFeature(select);
 
   // for button to submit changes
-  const handleSubmit = () => setOptions(createHeaders([country], feature));
+  const handleSubmit = () => {
+    const setHeaders = createHeaders([country], feature);
+    if (
+      !(
+        arrayEquals(options["countries"], setHeaders["countries"]) &&
+        options["feature"] === setHeaders["feature"]
+      )
+    ) {
+      setOptions(setHeaders);
+    }
+  };
 
   return (
     <div className="bg" style={{ backgroundImage: `url(${COVIDBG})` }}>
