@@ -6,15 +6,15 @@ import { ReactComponent as Spin } from "../styles/icons/fillsync-24px.svg";
 const Plot = createPlotlyComponent(Plotly);
 
 const VizAPI = ({ data, layout }) => {
-  const Load = ({ valid }) => {
-    if (valid === null) {
+  const Load = () => {
+    if (layout === null) {
       return <Spin className="spinner" alt="" />;
     } else return <Plot data={data} layout={layout} />;
   };
 
   return (
     <div className="center">
-      <Load valid={layout} />
+      <Load />
     </div>
   );
 };

@@ -29,7 +29,6 @@ li {
     border-radius: 25px;
     margin: 20px;
     display: inline-flex;
-    font-weight: 600;
     font-size: 85%;
     color: white;
     font-family: Montserrat;
@@ -44,20 +43,13 @@ li {
     fill: white;
 }
 
-p {
-    margin: 0px 0px 0px 15px;
-    padding: 10px;
-}
-
 h2 {
-    font-family: Monsterrat, Arial;
     font-weight: 700;
     padding: 20px;
     color: white;
 }
   
 h3 {
-    font-family: Monsterrat, Arial;
     font-weight: 500;
     padding: 15px;
     color: white;

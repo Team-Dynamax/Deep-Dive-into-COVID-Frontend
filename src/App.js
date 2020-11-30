@@ -2,7 +2,6 @@ import React from "react";
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
 import Navigation from "./components/Navigation/Navigation";
-import Footer from "./components/Footer/Footer";
 import { Home } from "./containers/HomePage/Home";
 import { Trends } from "./containers/Trends/Trends";
 import { Compare } from "./containers/Compare/Compare";
@@ -14,7 +13,7 @@ import { NoMatch } from "./containers/noMatch/noMatch";
 
 const App = () => {
   return (
-    <div className='layout'>
+    <div>
       <Navigation />
       <Switch>
         <Route exact path="/" component={Home} />
@@ -22,7 +21,7 @@ const App = () => {
         <Route exact path="/compare" component={Compare} />
         <Route component={NoMatch} />
       </Switch>
-      <Footer />
+      <div className='footer'>&#169;COVIZ 2020</div>
     </div>
   );
 };

@@ -1,20 +1,16 @@
 .title {
   color: black;
-  font-family: Montserrat;
   font-weight: 600;
   font-size: 150%;
   padding: 20px;
-  margin: auto;
   width: fit-content;
   background: rgba(202, 204, 221, 0.829);
-  backdrop-filter: blur(4px);
   border-radius: 25px;
   text-align: center;
 }
 
 .listing {
   color: black;
-  font-family: Montserrat;
   font-weight: 300;
   font-size: 130%;
   padding: 15px;
@@ -33,7 +29,6 @@
   padding: 15px;
   padding-bottom: 100px;
   padding-top: 5pc;
-  color: black;
   text-align: center;
   font-weight: 500;
   font-size: 120%;
@@ -55,11 +50,12 @@
   font-size: 120%;
 }
 
-.caching {
-  color: red;
+.message {
+  color: rgb(255, 123, 0);
   font-weight: 600;
   font-size: 120%;
   padding-bottom: 5%;
+  text-transform: uppercase;
 }
 
 .typewriter .metric {

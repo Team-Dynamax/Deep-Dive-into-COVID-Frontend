@@ -5,8 +5,8 @@ import { getStats } from "../../services/API";
 
 // Indicates errors in the API
 const Update = ({ updated }) => {
-  if (updated === "Caching in progress") {
-    return <div className="caching">&#x2715; CACHING IN PROGRESS</div>;
+  if (updated !== "") {
+    return <div className="message">! {updated}</div>;
   } else return <div></div>;
 };
 
@@ -45,6 +45,7 @@ export const DashBoard = () => {
             </p>
           </div>
         </div>
+
         <div className="column">
           <div className="stats">
             <Update updated={state} />

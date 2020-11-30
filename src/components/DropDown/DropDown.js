@@ -29,9 +29,6 @@ const customStyles = {
 
 };
 
-// select limit
-const limit = 10;
-
 const formatOptions = (options) =>
   options.map((item) => {
     return { value: item, label: item.toUpperCase() };
@@ -75,6 +72,9 @@ export const MultiSelect = ({ label, list, choice }) => {
   // Select requires an array of <value, label> pairs
   const options = formatOptions(list);
 
+  // select limit
+  const limit = 10;
+
   // use default selections
   const [option, setOption] = useState({
     value: [options[0].value, options[1].value],
@@ -115,7 +115,7 @@ export const MultiSelect = ({ label, list, choice }) => {
       <label htmlFor={label}>{label.toUpperCase()}:</label>
       <div className="position">
         <Select
-            classNamePrefix="multi-select"
+          classNamePrefix="multi-select"
           components={{ Menu }}
           isMulti
           isValidNewOption={isValidNewOption}

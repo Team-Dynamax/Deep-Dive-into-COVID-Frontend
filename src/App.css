@@ -32,10 +32,26 @@
   margin: auto;
   font-family: Montserrat, Arial;
   font-weight: 400;
-  font-size: 24px;
-  padding: 0;
- 
+  font-size: 24px; 
+  padding: 0px;
 }
+
+.footer {
+  font-weight: 300;
+  font-size: 36px;
+  text-align: right;
+  color: white;
+  background-color: black;
+  padding: 15px;
+}
+
+.error {
+  padding: 280px 0px 280px 0px;
+  color: black;
+  font-weight: 600;
+  font-size: 36px;
+  text-align: center;
+} 
 
 .row {
   margin-left: 0;
@@ -97,34 +113,6 @@
   }
 }
 
-.layout {
-  width: 100%;
-  padding: 0px;
-  margin: 0px;
-}
-
-.footer {
-  font-family: Montserrat;
-  font-weight: 300;
-  font-size: 36px;
-  text-align: right;
-  color: white;
-  background-color: black;
-  padding: 15px;
-}
-
-.error {
-  font-family: Monsterrat, Arial;
-  font-weight: 400;
-  padding: 280px 0px 280px 0px;
-  color: black;
-  text-align: center;
-  font-family: Montserrat;
-  font-weight: 600;
-  font-size: 36px;
-  text-align: center;
-} 
-
 .center {
   text-align: center;
   padding: 5%;
@@ -135,9 +123,9 @@
 
 p {
   color: black;
-  font-family: Montserrat;
-  font-weight: 600px;
   font-size: 36px;
+  margin: 0px 0px 0px 15px;
+  padding: 10px;
 }
 
 .update {
