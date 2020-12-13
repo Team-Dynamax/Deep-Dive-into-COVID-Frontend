@@ -66,7 +66,7 @@ export const DashBoard = () => {
             <br></br>
             NEW DEATHS AS OF TODAY:
             <div className="typewriter">
-              <p className="metric">{stats["TotalDeaths"]}</p>
+              <p className="metric">{stats["NewDeaths"]}</p>
             </div>
           </div>
         </div>
